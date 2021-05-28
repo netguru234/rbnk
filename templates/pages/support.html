@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- <header id="content-header" class="content-header" data-background-image="{% static 'sft1383/support.jpg' %}" aria-owns="content" aria-label="Page Header"> -->
+<header id="content-header" class="content-header" aria-owns="content" aria-label="Page Header">
+    <div class="container">
+      <h1>Support <span></span></h1>
+    </div>
+  </header>
+  
+  <main aria-labelledby="content-header" id="content" class="content striped-background">
+  
+    <div class="two-columns">
+    <div class="container narrow">
+      <div class="flex-wrapper">
+        <div class="flex-col">
+          <h2>How Can We Help You?</h2>
+  
+  <p>Our friendly staff is ready to answer your questions.</p>
+  
+  <p>Call customer service: <a href="tel:+15672579417" onclick="gtag('event', 'click', { 'event_category' : 'link-text', 'event_label' : 'Support Phone Number' });">(567) 257 9417</a></p>
+  
+  <!-- <p>Visit one of our branches:</p>
+  
+  <p><a class="button" href="locations.php.html" onclick="gtag('event', 'click', { 'event_category' : 'cta-button', 'event_label' : 'Location &amp; Hours Button' });">Locations &amp; Hours</a></p>         -->
+        </div>
+        <!-- <div class="flex-col">
+          <h2>Live Chat Schedule</h2>
+  
+  <p>Use the widget in the bottom-right corner to chat live with a CSB team member.</p>
+  
+  <ul>
+      <li>Weekdays: 9 a.m. &ndash; 5 p.m.</li>
+      <li>Saturday: 9 a.m. &ndash; noon</li>
+      <li>Sunday: unavailable</li>
+  </ul>
+  
+  <p><a class="button" href="https://075907002.securebanksolutions.com/chat/?im=CSHunt@communitystatebank.net&group=075907002&brand=075907002" target="_blank">Live Chat</a></p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+  <!-- <div class="wysiwyg-editor-content">
+    <div class="container narrow">
+      <h2>Lost or Stolen Card</h2>
+  
+  <p>If you believe you have lost your Community Check Card, Credit Card, or checkbook, or it has been stolen, or unauthorized charges appear on your billing statement, please call us immediately at the number on your statement, or you can call the numbers listed below.</p>
+  
+  <ul>
+      <li>Lost credit card: <a href="tel:+18008830131">(800) 883-0131</a></li>
+      <li>Lost credit card (international): <a href="tel:+18138682891">(813) 868-2891</a></li>
+      <li>Lost debit card: <a href="tel:+18004723272">(800) 472-3272</a></li>
+      <li>Lost checkbook: <a href="tel:+12628783763">(262) 878-3763</a></li>
+      <li>Fraudulent activity: <a href="tel:+12628783763">(262) 878-3763</a></li>
+      <li>Identity theft: <a href="tel:+12628783763">(262) 878-3763</a></li>
+  </ul>
+  
+  <h2>CSB Routing Number</h2>
+  
+  <p>Your bank routing number is a nine-digit code that&#39;s based on the bank where your account was opened. It&#39;s the first set of numbers printed on the bottom of your checks on the left side. <strong>Regalia Private Bank&#39;s routing number is 075907002.&nbsp;</strong></p>
+    </div>
+  </div> -->
+  
+    <form id="cms-form-area" class="contact-form CMSFORM cms-form" action="/cmsform-processor.php#cms-form-area" method="post">
+      <div class="wysiwyg-editor-content">
+    <div class="container narrow">
+      <h2>Email IPB</h2>
+  
+  <p>For general queries, use the form below.</p>
+  
+  <!-- <p>Please Note: Do not enter any non-public, personal information, such as account numbers, or social security numbers in the contact form. Thank you.</p> -->
+    </div>
+  </div>
+      <div class="container narrow">
+        <div class="row">
+    <div class="form-group col-sm-6">
+      <label for="2first-name"><span class="field-label-prefix"></span> First Name</label>
+      <input type="text" class="form-control wf-first-name" name="2first-name" id="2first-name" value="" required />
+    </div>
+    <input type="hidden" name="required[]" value="required" />
+    <input type="hidden" name="field[]" value="2first-name" />
+    <input type="hidden" name="desc[]" value="First Name" />
+    <div class="form-group col-sm-6">
+      <label for="2last-name"><span class="field-label-prefix"></span> Last Name</label>
+      <input type="text" class="form-control wf-last-name" name="2last-name" id="2last-name"  value="" required/>
+    </div>
+    <input type="hidden" name="required[]" value="required" />
+    <input type="hidden" name="field[]" value="2last-name" />
+    <input type="hidden" name="desc[]" value="Last Name" />
+  </div><div class="row">
+    <div class="form-group col-sm-12">
+      <label for="2email-address"><span class="field-label-prefix"></span> Email Address</label>
+      <input type="email" class="form-control wf-email" name="2email-address" id="2email-address" value="" required />
+    </div>
+    <input type="hidden" name="required[]" value="required" />
+    <input type="hidden" name="field[]" value="2email-address" />
+    <input type="hidden" name="desc[]" value="Email Address" />
+  </div><div class="row">
+    <div class="form-group col-sm-12">
+      <label for="comments">Questions or Comments</label>
+      <textarea  class="form-control" name="comments" id="comments"  rows="6"   ></textarea>
+    </div>
+    <input type="hidden" name="required[]" value="" />
+    <input type="hidden" name="field[]" value="comments" />
+    <input type="hidden" name="desc[]" value="Questions or Comments" />
+    <input type="hidden" name="text[]" value="comments" />
+  </div><div class="form-submit-wrapper">
+    <div class="way-offsides" aria-hidden="true">
+      <label for="magicURL" tabindex="-1"> </label>
+      <input type="text" class="magicURL" id="magicURL" name="magicURL" value="" tabindex="-1" />
+    </div>
+    <div class="row">
+      <div class="form-group col-sm-12">
+        <div class="formDefs">
+          <input type="hidden" name="code" value="5" />
+          <input type="hidden" name="subject" value="General Inquiry" />
+          <input type="hidden" name="ty" value="https://csb.bank/thank-you.html" />
+          <input type="hidden" name="tymessage" value="" />
+          <input type="hidden" name="quicksubmit" value="recaptcha-holder" />
+          <input type="hidden" name="formTitle" value="Contact Us" />
+          <input type="hidden" name="encrypt" value="" />
+          <input type="hidden" name="s_id" value="342" />
+        </div>
+        <div class="recaptcha-holder"></div>
+        <input type="submit" class="g-recaptcha btn btn-primary btn-custom cmsform-btn cmsform-btn-submit" data-callback="onSubmit" onclick="gtag('event', 'click', { 'event_category' : 'form-submission', 'event_label' : 'Contact Form Submit Button' });" value="Submit" />
+      </div><!--col-->
+    </div><!--row-->
+  </div><!--form-submit-wrapper-->
+      </div>
+    </form>
+  
+    
+  
+  </main>
+{% endblock %}
+
+

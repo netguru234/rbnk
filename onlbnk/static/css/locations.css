@@ -1,0 +1,326 @@
+/* This can't really be merged into main.css because that's a mobile-first stylesheet, and the locations aren't */
+
+/* override stuff from main site so map doesn't break */
+#page-content #map_canvas img {
+  float: none;
+  margin-left: 0;
+  margin-bottom: 0;
+  max-width: none;
+}
+
+/* desktop styles */
+.locations + .contact {
+  display: none;
+}
+
+.locations h3 {
+  /* font-size: 23px !important; */
+  /* line-height: 25px; */
+  /*color: #4e4d50;*/
+  /*font-size: 16px;*/
+}
+
+#map_canvas {
+  margin-bottom: 20px;
+}
+#map_canvas {
+  height: 500px;
+  background: #cccccc;
+}
+
+.map-canvas h3 {
+  margin: 0;
+}
+
+#map_canvas .gm-style-iw-d br + br {
+  display: none;
+}
+
+#map_canvas a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: underline;
+  border: none;
+}
+
+#map_canvas a:hover,
+#map_canvas a:active,
+#map_canvas a:focus {
+
+}
+
+.locations {
+  /*table-layout: fixed;*/
+  width: 100%;
+  margin: 0 0 40px 0;
+  border: none;
+}
+
+.locations select {
+  margin-top: 10px;
+}
+
+.locations .radio input[type="radio"] {
+  position: static; margin: 0;
+}
+
+.location td {
+  /* font: 14px/18px Trebuchet, "Trebuchet MS", "Fira Sans", Verdana, sans-serif; */
+  /* white-space: nowrap; */
+  vertical-align: top;
+  border-bottom: 1px solid #54565b;
+  /*font-size: 14px;
+  line-height: 18px;*/
+}
+
+.locations strong,
+.locations th,
+.locations label,
+.locations .fake-label {
+  /*font-weight: 600;*/
+}
+
+.location h4 {
+  margin: 0;
+  color: inherit;
+}
+
+.fake-label {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+}
+
+/* specific desktop styles */
+@media screen and (min-width: 600px){
+  /* @media screen and (min-width: 980px){   */
+  .or {
+    text-align: center;
+  }
+
+  .location td:not(.hours){
+    margin-right: 10px !important;
+    padding-left: 10px !important;
+    /*border-right: 1px solid #eeeeee;*/
+  }
+  .location td.hours {
+    padding-left: 10px !important;
+  }
+}
+
+.location td.street {
+  padding: 20px 0 0 0 !important;
+  /*width: 175px;*/
+}
+
+.location td.street p.has_atm {
+  font-style: italic;
+}
+
+.location td.street p.has_atm img {
+  float: left;
+  margin-right: 5px;
+}
+.street h3 {
+  /*font-family: 'Noto Serif', serif;*/
+  /* color: #a46c5d; */
+  /*color: #a26858;
+  font-size: 20px;*/
+}
+
+.location td.contact {
+  padding: 20px 0 0 0;
+  /*width: 210px;*/
+}
+
+.location td.hours {
+  padding: 20px 0 0 0;
+  /*width: 275px;*/
+}
+
+.location table.hours {
+  width: 100%;
+  margin: 0 0 20px 0;
+  font-variant-numeric: lining-nums tabular-nums;
+  -moz-font-feature-settings: "lnum", "tnum";
+  -webkit-font-feature-settings: "lnum", "tnum";
+  font-feature-settings: "lnum", "tnum";
+  border: none;
+}
+
+.hours tbody tr:nth-child(even) {
+  background-color: #f6f6f6;
+}
+
+.location table.hours th {
+  /* width: 130px; */
+  /* font-weight: normal; */
+  text-align: left;
+}
+
+.location table.hours td {
+  border: none;
+}
+
+.atm_location th .h3,
+.atm_location .distance h4 {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.atm_location td,
+.atm_location th {
+  vertical-align: top;
+}
+
+.atm_location .name {
+  padding-right: 15px;
+}
+
+.atm_location[id] + .atm_location[id] th {
+  padding-top: 15px;
+}
+
+@media (min-width: 601px) {
+  .atm_location[id] + .atm_location[id] th,
+  .atm_location[id] + .atm_location[id] td {
+    padding-top: 5px;
+  }
+
+  .atm_location .distance {
+    padding-left: 15px;
+  }
+
+  .atm_location:not([id]) .distance {
+    vertical-align: bottom;
+  }
+}
+
+.atm_location .address a {
+  display: inline !important;
+}
+.atm_location td.address {
+
+}
+
+.atm_location td.address address {
+  margin: 0;
+}
+
+.atm_location td.address .extended_address {
+  display: none;
+}
+
+.atm_location td.distance {
+  /*width: 100px;*/
+}
+
+@media screen and (max-width: 767px) {
+  .location address a {
+    display: inline !important;
+  }
+}
+
+/* mobile styles */
+@media screen and (max-width: 600px) {
+  /* @media screen and (max-width: 980px) {   */
+  /*#map_canvas,
+  #map_canvas + div {
+    display: none;
+  }*/
+
+  .locations {
+    width: 100%;
+  }
+
+  form.locations + h2 {
+    padding-bottom: 15px;
+    /*border-bottom: 1px solid #b6b6b6;*/
+  }
+
+  .location td.street {
+    display: block;
+    width: 100%;
+    border: none;
+    padding-top: 40px;
+  }
+
+  table.locations + h2,
+  .location td.street h3 {
+    margin: 0 0 15px;
+    /* font-weight: normal; */
+    /* font-size: 30px; */
+    /* line-height: normal; */
+  }
+
+  .location address {
+    margin-bottom: 5px;
+  }
+
+  .location td.street p.has_atm {
+    margin-bottom: 15px;
+  }
+
+  .location td.contact {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+  }
+
+  .location td.hours {
+    display: block;
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 30px;
+  }
+
+  .location table.hours {
+    margin-bottom: 15px;
+  }
+
+  .atm_location .name {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+  .atm_location .name br {
+    display: none;
+  }
+
+  .atm_location .name a {
+    display: block;
+    margin-top: 15px;
+  }
+
+  .atm_location .name h3 {
+    margin-top: 15px;
+    margin-bottom: -15px;
+    font-size: 18px;
+  }
+
+  .atm_location td.address {
+    display: block;
+    width: 100%;
+    border: none;
+  }
+
+  .atm_location td.distance {
+    display: block;
+    width: 100%;
+  }
+
+  .atm_location td.distance br {
+    display: none;
+  }
+
+  .atm_location td.distance h3,
+  .atm_location td.distance h4 {
+    display: none;
+  }
+
+  #results {
+    width: auto;
+  }
+}

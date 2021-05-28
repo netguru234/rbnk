@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<main id="content" class="content striped-background section-homepage">
+    <h1 class="sr-only">Regalia Private Bank</h1>
+    <div class="main-marketing">
+       <img class="hidden"
+          src="{% static 'sft1382/CACHE-1920x1920_banner.jpg' %}"
+          srcset="https://csb.bank/sft1382/banner.jpg 1x, https://csb.bank/sft1382/banner.jpg 1.5x"
+          aria-hidden="true"
+          alt=""
+          />
+       <div class="container">
+          <h2 class="h1">Simply <span>the Best</span></h2>
+          <p class="text hidden-xs">America's best no-fee accounts for you or your business.</p>
+          <!-- <p class="has-inline-buttons">
+             <a class="button" href="personal-checking-account.html" onclick="gtag('event', 'click', { 'event_category' : 'homepage', 'event_label' : 'personal checking banner' });">Personal Checking</a>
+             <a class="button" href="business-checking-accounts.html" onclick="gtag('event', 'click', { 'event_category' : 'homepage', 'event_label' : 'business checking banner' });">Business Checking</a>
+          </p> -->
+       </div>
+    </div>
+    <a class="quick-link" href="{% url 'personal-banking' %}" onclick="gtag('event', 'click', { 'event_category' : 'homepage-cta-box', 'event_label' : 'Homepage Personal Banking Box' });">
+    <img class="background" src="{% static 'sft1389/piggy-bank.svg' %}" aria-hidden="true" alt="" />
+    <span class="main">Personal Banking</span>
+    <span class="text">Accounts and services designed for individuals and families</span>
+    </a><a class="quick-link" href="{% url 'business-banking' %}" onclick="">
+    <img class="background" src="{% static 'sft1389/surface1.svg' %}" aria-hidden="true" alt="" />
+    <span class="main">Business Banking</span>
+    <span class="text">Accounts, loans and tools built especially for your business</span>
+    </a><a class="quick-link" href="{% url 'mortgage-center' %}" onclick="">
+    <img class="background" src="{% static 'sft1389/loan.svg' %}" aria-hidden="true" alt="" />
+    <span class="main">Mortgage Center</span>
+    <span class="text">Everything you need to know about our mortgage services</span>
+    </a><a class="quick-link" href="#" onclick="">
+    <img class="background" src="{% static 'sft1389/network.svg' %}" aria-hidden="true" alt="" />
+    <span class="main">Community</span>
+    <span class="text">Learn about us and how we serve you</span>
+    </a>
+    <div class="two-columns">
+       <div class="container narrow">
+          <div class="flex-wrapper">
+             <div class="flex-col">
+                <h2>Making our America better <span>&mdash; TOGETHER.</span></h2>
+             </div>
+             <div class="flex-col">
+                <p>We invest in the region because this is our home too. Regalia Private Bank is big enough to offer what the national banks do but small enough to care about you.</p>
+                <!-- <p><a class="button" href="community.html">Our Community</a></p> -->
+             </div>
+          </div>
+       </div>
+    </div>
+ </main>
+{% endblock %}
+
+

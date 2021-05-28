@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<header id="content-header" class="content-header" data-background-image="{% static 'sft1383/locations.jpg' %}" aria-owns="content" aria-label="Page Header">
+    <div class="container">
+      <h1>Locations &amp; Hours</h1>
+    </div>
+  </header>
+  
+  <div class="container site-content">
+  
+    <main aria-labelledby="content-header" id="content" class="content">
+      
+      <div class="col-xs-12">
+  
+  <!-- <div id="map_canvas" class="map-canvas"></div> -->
+
+  
+  <h2>Office Locations</h2>
+  <table class="locations" title="Table of Office Locations">
+    <caption class="sr-only">Office Location</caption>
+    <td class="contact">
+        <h3>Contact Information</h3>
+        <h4>Mailing Address</h4>
+        <address>
+            Louisiana street,<br />
+            Downtown Huston, TX 77002
+        </address>
+        <h4>Online</h4>
+        <p><a href="support.html">Contact Us</a>
+    </p>
+        <h4>Branch Phone</h4>
+    <p><a href="tel:+15672579417">(567) 257 9417</a></p>
+        
+      </td>
+  </table>
+  
+  </div>
+      <form action="locations.php#formoutput" method="post" class="contact -tv-ignore:E872"></form><!--do NOT add whitespace inside this form tag because there's a CSS rule that uses the :empty pseudo-class to prevent this form from rendering when it's empty, and whitespace makes it non-empty-->
+    </main>
+  
+  </div>
+{% endblock %}
