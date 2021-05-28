@@ -34,10 +34,10 @@ ALLOWED_HOSTS = [
     # "https://www.bankleve.com",
     # "bankleve.com",
     # "https://bankleve.com",
-    'localhost'
-    # 'intesapvt.herokuapp.com',
-    # 'www.intesaprivatebank.com',
-    # 'intesaprivatebank.com'
+    # 'localhost'
+    'regbnk.herokuapp.com',
+    'www.regaliabankonline.com',
+    'regaliabankonline.com'
 ]
 
 
