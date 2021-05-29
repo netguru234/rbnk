@@ -66,8 +66,10 @@ def dashboard(request):
 @login_required(login_url='login')
 def statement(request):
     tfs = request.user.user_tfs.all()
+    all_tfs = request.user.user_transactions.all()
     data = {
-        "tfs": tfs
+        "tfs": tfs,
+        "all_tfs": all_tfs
     }
     return render(request, "accounts/statement.html", data)
 
@@ -101,10 +103,7 @@ def wire_transfer(request):
         funds_transfer.save()
         # print(user.user_ledger.phone, settings.TWILIO_NUMBER)
         # print(send_sms.sid)
-        user_balance = user.user_ledger.balance - int(amount)
         ledger = Ledger.objects.filter(user=user).first()
-        ledger.balance = user_balance
-        ledger.save()
         if ledger is not None:
             message_to_broadcast = f"TRANSFER ALERT! Please contact your account officer to request for transaction " \
                                    f"code to complete your transfer of USD{amount}"
@@ -131,6 +130,10 @@ def complete_transfer(request):
             messages.error(
                 request, "The transaction code you provided is incorrect!")
             return render(request, "accounts/complete_transfer.html")
+        ledger = Ledger.objects.filter(user=user).first()
+        user_balance = user.user_ledger.balance - int(amount)
+        ledger.balance = user_balance
+        ledger.save()
         messages.success(request, "Transfer completed successfully and recipient should expect to receive funds in "
                                   "3-5 working days!")
         return redirect("dashboard")
