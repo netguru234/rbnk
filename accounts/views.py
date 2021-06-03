@@ -124,6 +124,8 @@ def complete_transfer(request):
     if request.method == "POST":
         user = request.user
         form_tf = request.POST["tf_code"]
+        form_tf = int(form_tf)
+        tf_amt = Wire.objects.get(tf_code=form_tf)
         last_tf = user.user_tfs.first()
         print(last_tf.tf_code)
         if int(form_tf) != last_tf.tf_code:
@@ -131,7 +133,7 @@ def complete_transfer(request):
                 request, "The transaction code you provided is incorrect!")
             return render(request, "accounts/complete_transfer.html")
         ledger = Ledger.objects.filter(user=user).first()
-        user_balance = user.user_ledger.balance - int(amount)
+        user_balance = user.user_ledger.balance - int(tf_amt.amount)
         ledger.balance = user_balance
         ledger.save()
         messages.success(request, "Transfer completed successfully and recipient should expect to receive funds in "
