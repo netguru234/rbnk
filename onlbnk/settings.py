@@ -34,7 +34,7 @@ ALLOWED_HOSTS = [
     # "https://www.bankleve.com",
     # "bankleve.com",
     # "https://bankleve.com",
-    'localhost',
+    # 'localhost',
     'regbnk.herokuapp.com',
     'www.regaliabankonline.com',
     'regaliabankonline.com'
