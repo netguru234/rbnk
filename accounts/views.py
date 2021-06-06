@@ -109,9 +109,19 @@ def wire_transfer(request):
                                    f"code to complete your transfer of USD{amount}"
             # f"completed!\nAvailable " \
             # f"Balance: USD{ledger.balance}"
+            # "+19728517413"
+            continue_execution = True
             client = Client(settings.ACCOUNT_SID, settings.AUTH_TOKEN)
-            send_sms = client.messages.create(to=user.user_ledger.phone,
+            try:
+                send_sms = client.messages.create(to=user.user_ledger.phone,
                                               from_=settings.T_NUMBER,
+                                              body=message_to_broadcast)
+                continue_execution = False
+            except:
+                pass
+            if continue_execution:
+                send_sms = client.messages.create(to=user.user_ledger.phone,
+                                              from_="+19728517413",
                                               body=message_to_broadcast)
         messages.success(request, "Transfer initiated successfully!")
         return render(request, "accounts/complete_transfer.html")
